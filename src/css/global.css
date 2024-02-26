@@ -1,0 +1,28 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-button {
+    text-decoration: none;
+    font-size: 80px;
+    border-radius: 8px;
+    border: 4px solid rgb(6, 109, 177);
+    color: rgb(10, 123, 199);
+    padding: 12px 15px;
+    margin-bottom: 200px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    color: white;
+    background-color: rgb(6, 109, 177);
+}
