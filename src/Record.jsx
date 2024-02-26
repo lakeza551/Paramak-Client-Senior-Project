@@ -8,7 +8,7 @@ function Record(props) {
     const token = params.get('token')
     useEffect(async () => {
         try {
-            const res = await fetch(`/patient_data?token=${token}`)
+            const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/patient_data?token=${token}`)
             const {data} = await res.json()
             console.log(data)
         } catch (error) {
