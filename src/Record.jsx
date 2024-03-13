@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './css/global.css'
 import { useLocation } from 'react-router-dom'
+import { GridLoader } from 'react-spinners'
 
 function Record(props) {
     const search = useLocation().search
@@ -21,7 +22,11 @@ function Record(props) {
         getData()
     }, [])
     if(patientData === null)
-        return <h1>กำลังโหลดข้อมูล</h1>
+        return (
+            <div style={{height: '100vh'}} className="center">
+                <GridLoader color='rgb(6, 109, 177)' size={40} />
+            </div>
+        )
     return (
         <div className="page-container">
             <h1 className='patient-pid'>รหัสประจำตัวประชาชน <span style={{color: "rgb(6, 99, 165)"}}>{patientData.pid}</span></h1>
